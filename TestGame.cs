@@ -13,7 +13,7 @@ namespace GW
 		private GraphicsDeviceManager _graphics;
 		private SpriteBatch _spriteBatch;
 
-		//TODO: public SpriteFont basicFont;
+		public SpriteFont basicFont;
 
 		//TODO: public Texture2D firstTexture;
 
@@ -61,7 +61,8 @@ namespace GW
 			// Create a new SpriteBatch, which can be used to draw textures.
 			_spriteBatch = new SpriteBatch(GraphicsDevice);
 
-			// TODO: load fonts
+			// load fonts
+			basicFont = Content.Load<SpriteFont>("BasicFont");
 
 			// TODO: load sprites
 
