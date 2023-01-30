@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GW
+namespace GalacticWarriors
 {
 	public static class Program
 	{
