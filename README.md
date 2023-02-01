@@ -1,2 +1,2 @@
 # GalacticWarriors
-A top-down procedurally-generated bullet hell action game!
+A top-down procedurally-generated roguelite bullet hell action game!
