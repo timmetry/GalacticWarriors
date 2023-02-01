@@ -1,7 +1,7 @@
 ﻿using UG;
-using UG.Math;
+using UG.Physics;
 
-namespace UG.Art
+namespace UG.Graphics
 {
 	public abstract class SpriteSheet
 	{
