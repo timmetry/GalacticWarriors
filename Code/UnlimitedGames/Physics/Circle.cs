@@ -1,6 +1,6 @@
 ﻿
 
-namespace UG.Math
+namespace UG.Physics
 {
 	public struct Circle
 	{

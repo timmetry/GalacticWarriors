@@ -1,6 +1,6 @@
 ﻿
 
-namespace UG.Art
+namespace UG.Graphics
 {
 	public class Sprite
 	{
