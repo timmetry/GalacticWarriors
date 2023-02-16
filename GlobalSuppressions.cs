@@ -15,4 +15,5 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE0025:Use expression body for properties", Justification = "<Pending>")]
 [assembly: SuppressMessage("Style", "IDE0011:Add braces", Justification = "<Pending>")]
 [assembly: SuppressMessage("Style", "IDE0130:Namespace does not match folder structure", Justification = "<Pending>")]
-
+[assembly: SuppressMessage("Style", "IDE0003:Remove qualification", Justification = "<Pending>")]
+[assembly: SuppressMessage("Style", "IDE0048:Add parentheses for clarity", Justification = "<Pending>")]

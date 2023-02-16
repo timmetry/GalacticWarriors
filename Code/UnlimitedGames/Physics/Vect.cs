@@ -23,7 +23,7 @@ namespace UG.Physics
 
 		public override int GetHashCode()
 		{
-			var hashCode = 1502939027;
+			int hashCode = 1502939027;
 			hashCode *= -1521134295 + base.GetHashCode();
 			hashCode *= -1521134295 + x.GetHashCode();
 			hashCode *= -1521134295 + y.GetHashCode();
