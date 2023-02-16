@@ -5,8 +5,14 @@
 
 using System.Diagnostics.CodeAnalysis;
 
+// Main() suppressions for Program.cs only
+[assembly: SuppressMessage("Style", "IDE0063:Use simple 'using' statement", Justification = "<Pending>", Scope = "member", Target = "~M:GalacticWarriors.Program.Main")]
+[assembly: SuppressMessage("Style", "IDE0008:Use explicit type", Justification = "<Pending>", Scope = "member", Target = "~M:GalacticWarriors.Program.Main")]
+
+// GLOBAL suppressions for the entire project
 [assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "<Pending>")]
 [assembly: SuppressMessage("Style", "IDE0032:Use auto property", Justification = "<Pending>")]
 [assembly: SuppressMessage("Style", "IDE0025:Use expression body for properties", Justification = "<Pending>")]
 [assembly: SuppressMessage("Style", "IDE0011:Add braces", Justification = "<Pending>")]
 [assembly: SuppressMessage("Style", "IDE0130:Namespace does not match folder structure", Justification = "<Pending>")]
+
