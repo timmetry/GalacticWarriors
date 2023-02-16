@@ -5,5 +5,8 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Style", "IDE0032:Use auto property", Justification = "<Pending>", Scope = "member", Target = "~F:UG.Clock.ticks")]
-[assembly: SuppressMessage("Style", "IDE0025:Use expression body for properties", Justification = "<Pending>", Scope = "member", Target = "~P:UG.Clock.t")]
+[assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "<Pending>")]
+[assembly: SuppressMessage("Style", "IDE0032:Use auto property", Justification = "<Pending>")]
+[assembly: SuppressMessage("Style", "IDE0025:Use expression body for properties", Justification = "<Pending>")]
+[assembly: SuppressMessage("Style", "IDE0011:Add braces", Justification = "<Pending>")]
+[assembly: SuppressMessage("Style", "IDE0130:Namespace does not match folder structure", Justification = "<Pending>")]
