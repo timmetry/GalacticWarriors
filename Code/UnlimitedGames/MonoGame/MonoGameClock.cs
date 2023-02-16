@@ -7,24 +7,9 @@ namespace UG.MonoGame
 
 		private GameTime gameTime;
 
-		public void UpdateStart(GameTime newGameTime)
-		{
-			Tick();
-			gameTime = newGameTime;
-			WakeUp();
-		}
-		public void UpdateStop()
-		{
-			Sleep();
-		}
-		public void DrawStart(GameTime newGameTime)
+		public void Update(GameTime newGameTime)
 		{
 			gameTime = newGameTime;
-			//WakeUp();
-		}
-		public void DrawStop()
-		{
-			//Sleep();
 		}
 	}
 }

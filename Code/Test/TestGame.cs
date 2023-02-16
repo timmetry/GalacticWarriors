@@ -13,6 +13,7 @@ namespace GalacticWarriors
 
 		protected Texture2D grassTexture;
 		protected Texture2D waterTexture;
+		protected Texture2D healthCircleTexture;
 
 		/// <summary>
 		/// LoadContent will be called once per game and is the place to load
@@ -28,6 +29,7 @@ namespace GalacticWarriors
 			// TODO: load sprites
 			grassTexture = Content.Load<Texture2D>("terrain grass");
 			waterTexture = Content.Load<Texture2D>("terrain water");
+			healthCircleTexture = Content.Load<Texture2D>("HealthCircle");
 
 			// TODO: load music
 

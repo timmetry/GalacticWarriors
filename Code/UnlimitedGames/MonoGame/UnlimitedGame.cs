@@ -66,8 +66,8 @@ namespace UG.MonoGame
 			spriteBatch = new SpriteBatch(GraphicsDevice);
 
 			// initialize the clock and camera for the UG library
-			clock = new MonoGameClock();
 			camera = new MonoGameCamera(GraphicsDevice, spriteBatch);
+			clock = new MonoGameClock();
 		}
 
 		/// <summary>
@@ -84,7 +84,7 @@ namespace UG.MonoGame
 		/// checking for collisions, gathering input, and playing audio.
 		/// </summary>
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
-		protected override void Update(GameTime gameTime)
+		sealed protected override void Update(GameTime gameTime)
 		{
 			// SEALED - all updating is handled here and within world/entities
 
@@ -93,12 +93,13 @@ namespace UG.MonoGame
 				Exit();
 
 			// make sure the clock is ready to update!
-			clock.UpdateStart(gameTime);
+			clock.Update(gameTime);
+			clock.Tick();
 
 			// TODO: update world *********************************************
 
 			// make sure no updating can happen outside of here!
-			clock.UpdateStop();
+			clock.Tock();
 
 			base.Update(gameTime);
 		}
@@ -112,14 +113,16 @@ namespace UG.MonoGame
 			// SEALED - all drawing is handled here and within entities/camera
 
 			// make sure the clock and camera are ready to draw!
-			clock.DrawStart(gameTime);
+			clock.Update(gameTime);
+			clock.Tick();
 			camera.DrawStart();
 
 			// TODO: draw world ***********************************************
+			
 
 			// make sure no updating or drawing can happen outside of here!
 			camera.DrawStop();
-			clock.DrawStop();
+			clock.Tock();
 
 			base.Draw(gameTime);
 		}

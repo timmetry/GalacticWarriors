@@ -13,18 +13,18 @@ namespace UG
 		}
 		protected void RequireSleep()
 		{
-			if (!isAwake)
+			if (isAwake)
 				throw new System.Exception("UG ERROR: This action cannot be performed while the manager is awake!");
 		}
 
 		protected void WakeUp()
 		{
-			//RequireSleep(); // TODO - figure out why this doesn't work!
+			RequireSleep(); // TODO - figure out why this doesn't work!
 			isAwake = true;
 		}
 		protected void Sleep()
 		{
-			//RequireAwake(); // TODO - figure out why this doesn't work!
+			RequireAwake(); // TODO - figure out why this doesn't work!
 			isAwake = false;
 		}
 	}

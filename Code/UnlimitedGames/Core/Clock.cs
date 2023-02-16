@@ -7,10 +7,14 @@ namespace UG
 		public ulong t { get { return ticks; } }
 		private ulong ticks = 0;
 
-		protected virtual void Tick() 
+		public virtual void Tick()
 		{
-			//RequireSleep();
 			++ticks;
+			WakeUp();
+		}
+		public virtual void Tock()
+		{
+			Sleep();
 		}
 	}
 }
