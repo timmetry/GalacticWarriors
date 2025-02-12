@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using UG;
-using UG.Physics;
+using UG.Math2d;
 using UG.Graphics;
 
 namespace UG.MonoGame

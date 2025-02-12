@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
-using UG;
 using UG.MonoGame;
 
 namespace GalacticWarriors
@@ -26,7 +25,7 @@ namespace GalacticWarriors
 			// load fonts
 			basicFont = Content.Load<SpriteFont>("BasicFont");
 
-			// TODO: load sprites
+			// load sprites
 			grassTexture = Content.Load<Texture2D>("terrain grass");
 			waterTexture = Content.Load<Texture2D>("terrain water");
 			healthCircleTexture = Content.Load<Texture2D>("HealthCircle");

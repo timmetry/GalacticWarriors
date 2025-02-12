@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace UG.Physics
+namespace UG.Math2d
 {
 	public struct Rect
 	{
@@ -65,13 +65,13 @@ namespace UG.Physics
 
 		//---------- MonoGame support for Rectangle ----------//
 
-		public Rect(Rectangle r)
+		public Rect(Rectangle rect)
 		{
-			this.center = new Vect(r.X + r.Width / 2.0, r.Y + r.Height / 2.0);
-			this.size = new Vect(r.Width, r.Height);
+			this.center = new Vect(rect.X + rect.Width / 2.0, rect.Y + rect.Height / 2.0);
+			this.size = new Vect(rect.Width, rect.Height);
 		}
 
-		public static explicit operator Rectangle(Rect r)
-		{ return new Rectangle((int)(r.left + 0.5), (int)(r.top + 0.5), (int)(r.width + 0.5), (int)(r.height + 0.5)); }
+		public static explicit operator Rectangle(Rect rect)
+		{ return new Rectangle((int)(rect.left + 0.5), (int)(rect.top + 0.5), (int)(rect.width + 0.5), (int)(rect.height + 0.5)); }
 	}
 }

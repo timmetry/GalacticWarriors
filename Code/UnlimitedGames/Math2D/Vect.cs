@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 
-namespace UG.Physics
+namespace UG.Math2d
 {
 	public struct Vect
 	{
