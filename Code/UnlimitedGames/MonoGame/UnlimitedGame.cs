@@ -2,15 +2,14 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
-using UG;
 
 namespace UG.MonoGame
 {
 	public class UnlimitedGame : Game
 	{
-		// TODO: provide optional alternatives
-		public const int SCREEN_WIDTH = 1920;
-		public const int SCREEN_HEIGHT = 1080;
+		// TEMP_TODO: provide optional alternatives
+		public const int DEFAULT_SCREEN_WIDTH = 1920;
+		public const int DEFAULT_SCREEN_HEIGHT = 1080;
 		public const string CONTENT_FOLDER = "Content";
 
 		private GraphicsDeviceManager graphics;
@@ -32,8 +31,8 @@ namespace UG.MonoGame
 			graphics = new GraphicsDeviceManager(this);
 			Content.RootDirectory = CONTENT_FOLDER;
 
-			graphics.PreferredBackBufferWidth = SCREEN_WIDTH;
-			graphics.PreferredBackBufferHeight = SCREEN_HEIGHT;
+			graphics.PreferredBackBufferWidth = DEFAULT_SCREEN_WIDTH;
+			graphics.PreferredBackBufferHeight = DEFAULT_SCREEN_HEIGHT;
 
 			graphics.HardwareModeSwitch = false;
 			graphics.IsFullScreen = true;
@@ -88,7 +87,7 @@ namespace UG.MonoGame
 		{
 			// SEALED - all updating is handled here and within world/entities
 
-			// TODO: remove once more stable exit procedure is available
+			// TEMP_TODO: remove once more stable exit procedure is available
 			if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
 				Exit();
 
