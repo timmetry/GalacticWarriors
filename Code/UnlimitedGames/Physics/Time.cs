@@ -21,22 +21,22 @@ namespace UG.Physics
 
 		public double ms { readonly get => (double)mcs / MCS_PER_MILISECOND; set => mcs = (long)Math.Round(value * MCS_PER_MILISECOND); }
 		public double s { readonly get => (double)mcs / MCS_PER_SECOND; set => mcs = (long)Math.Round(value * MCS_PER_SECOND); }
-		public double m { readonly get => (double)mcs / MCS_PER_MINUTE; set => mcs = (long)Math.Round(value * MCS_PER_MINUTE; }
+		public double m { readonly get => (double)mcs / MCS_PER_MINUTE; set => mcs = (long)Math.Round(value * MCS_PER_MINUTE); }
 		public double h { readonly get => (double)mcs / MCS_PER_HOUR; set => mcs = (long)Math.Round(value * MCS_PER_HOUR); }
 		public double d { readonly get => (double)mcs / MCS_PER_DAY; set => mcs = (long)Math.Round(value * MCS_PER_DAY); }
 		public double y { readonly get => (double)mcs / MCS_PER_YEAR; set => mcs = (long)Math.Round(value * MCS_PER_YEAR); }
 
 		//---------- common constructors ----------//
 
-		public Time(long microSeconds) { this.mcs = microSeconds; }
+		public Time(long microSeconds) 
+		{ this.mcs = microSeconds; }
 
 		public Time(double hours, double minutes, double seconds) 
 		{ this.mcs = (long)Math.Round(hours * MCS_PER_HOUR + minutes * MCS_PER_MINUTE + seconds * MCS_PER_SECOND); }
 
 		//---------- Object overloads ----------//
 
-		public override readonly string ToString()
-		{ return ms.ToString() + "ms"; }
+		public override readonly string ToString() => $"{ms}ms";
 
 		public override readonly int GetHashCode()
 		{
