@@ -11,7 +11,12 @@ namespace UG.MonoGame
 
 		public MonoGameSpriteSheet(Texture2D texture)
 		{
-			this.texture = texture;
+			// TODO: not sure if IsDisposed is a good enough check to verify if Texture2D is valid?
+			if (texture != null && !texture.IsDisposed)
+			{
+				this.texture = texture;
+				WakeUp();
+			}
 			size.x = texture.Width;
 			size.y = texture.Height;
 		}

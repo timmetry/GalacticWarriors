@@ -2,7 +2,7 @@
 
 namespace UG.Graphics
 {
-	public class Sprite
+	public class Sprite : Image
 	{
 		protected SpriteSheet spriteSheet1;
 

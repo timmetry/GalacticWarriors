@@ -2,7 +2,7 @@
 
 namespace UG.Graphics
 {
-	public abstract class SpriteSheet
+	public abstract class SpriteSheet : Manager
 	{
 		protected Vect size;
 
