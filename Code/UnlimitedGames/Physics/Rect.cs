@@ -7,15 +7,15 @@ namespace UG.Physics
 		public Vect center;
 		public Vect size;
 
-		public double x { get => center.x; set => center.x = value; }
-		public double y { get => center.y; set => center.y = value; }
-		public double width { get => size.x; set => size.x = value; }
-		public double height { get => size.y; set => size.y = value; }
+		public double x { readonly get => center.x; set => center.x = value; }
+		public double y { readonly get => center.y; set => center.y = value; }
+		public double width { readonly get => size.x; set => size.x = value; }
+		public double height { readonly get => size.y; set => size.y = value; }
 
-		public double left { get => center.x - size.x / 2; set => center.x = value + size.x / 2; }
-		public double right { get => center.x + size.x / 2; set => center.x = value - size.x / 2; }
-		public double top { get => center.y - size.y / 2; set => center.y = value + size.y / 2; }
-		public double bottom { get => center.y + size.y / 2; set => center.y = value - size.y / 2; }
+		public double left { readonly get => center.x - size.x / 2; set => center.x = value + size.x / 2; }
+		public double right { readonly get => center.x + size.x / 2; set => center.x = value - size.x / 2; }
+		public double top { readonly get => center.y - size.y / 2; set => center.y = value + size.y / 2; }
+		public double bottom { readonly get => center.y + size.y / 2; set => center.y = value - size.y / 2; }
 
 
 		//---------- common constructors ----------//
@@ -31,10 +31,10 @@ namespace UG.Physics
 
 		//---------- Object overloads ----------//
 
-		public override string ToString()
+		public override readonly string ToString()
 		{ return "Rect(" + center.x.ToString() + ", " + center.y.ToString() + size.x.ToString() + ", " + size.y.ToString() + ")"; }
 
-		public override int GetHashCode()
+		public override readonly int GetHashCode()
 		{
 			int hashCode = 1502939027;
 			hashCode *= -1521134295 + base.GetHashCode();

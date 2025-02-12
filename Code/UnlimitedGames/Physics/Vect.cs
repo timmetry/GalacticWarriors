@@ -5,11 +5,13 @@ namespace UG.Physics
 {
 	public struct Vect
 	{
+		//---------- variables & accessors ----------//
+
 		public double x;
 		public double y;
 
-		public double length
-		{ get { return System.Math.Sqrt(x * x + y * y); } }
+		public readonly double length
+		{ get { return Math.Sqrt(x * x + y * y); } }
 
 		//---------- common constructors ----------//
 
@@ -18,10 +20,10 @@ namespace UG.Physics
 
 		//---------- Object overloads ----------//
 
-		public override string ToString()
+		public override readonly string ToString()
 		{ return "(" + x.ToString() + ", " + y.ToString() + ")"; }
 
-		public override int GetHashCode()
+		public override readonly int GetHashCode()
 		{
 			int hashCode = 1502939027;
 			hashCode *= -1521134295 + base.GetHashCode();
