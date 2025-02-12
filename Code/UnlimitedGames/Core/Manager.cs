@@ -19,12 +19,12 @@ namespace UG
 
 		protected void WakeUp()
 		{
-			RequireSleep(); // TODO - figure out why this doesn't work!
+			RequireSleep();
 			isAwake = true;
 		}
 		protected void Sleep()
 		{
-			RequireAwake(); // TODO - figure out why this doesn't work!
+			RequireAwake();
 			isAwake = false;
 		}
 	}
