@@ -58,6 +58,7 @@ namespace UG.Physics
 
 		//---------- operator overloads ----------//
 
+		public static Time operator -(Time a) => new Time(-a.mcs);
 
 
 		//---------- MonoGame support for TimeSpan ----------//
